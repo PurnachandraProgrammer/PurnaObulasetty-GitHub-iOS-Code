@@ -1,3 +1,18 @@
+/*The example below defines a structure called FixedLengthRange, which describes a range of integers whose range length can’t be changed after it’s created:*/
+
+struct FixedLengthRange {
+    var firstValue:Int
+    let length:Int
+}
+
+var rangeOfThreeItems = FixedLengthRange(firstValue:0, length:3)
+// the range represents integer values 0, 1, and 2”
+print(rangeOfThreeItems)
+rangeOfThreeItems.firstValue = 6
+print(rangeOfThreeItems)
+
+
+// Struct computed properties example
 struct Point {
     var x = 0.0,y = 0.0
 }
