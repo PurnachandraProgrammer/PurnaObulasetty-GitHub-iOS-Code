@@ -117,38 +117,7 @@ class ViewController: UIViewController {
             evenHeadLast?.next = oddHead
             oddHeadLast?.next = nil
             traverseHead = evenHead
-
-            /*
-            if evenHead != nil {
-                
-                if oddHead != nil {
-                    
-                    evenHeadLast?.next = oddHead
-                    oddHeadLast?.next = nil
-                    traverseHead = evenHead
-                }
-                
-                else {
-                    traverseHead = evenHead
-                }
-            }
-            
-            else {
-                
-                if oddHead != nil {
-                    
-                    traverseHead = oddHead
-                }
-
-            }
-            
-            print(traverseHead?.description)
-//            while traverseHead != nil {
-//                print("\(traverseHead!.value)")
-//                traverseHead = traverseHead?.next
-//            }*/
-
-        }
+       }
         
         return traverseHead
     }
@@ -184,7 +153,6 @@ class ViewController: UIViewController {
                     finalArray.append(nextElement)
                 }
                 else {
-                    // return
                     sum = array[firstIndex]
                     finalArray = []
                     finalArray.append(array[firstIndex])
