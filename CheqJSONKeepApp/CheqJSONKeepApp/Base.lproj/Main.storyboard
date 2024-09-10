@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W6g-hC-gh1">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--City List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CityListViewController" customModule="CheqJSONKeepApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FTr-eI-NX3">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityListTableViewCell" id="RNC-Q1-azs" customClass="CityListTableViewCell" customModule="CheqJSONKeepApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="56.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RNC-Q1-azs" id="StW-jE-G0S">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="56.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cityName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTS-Wu-e1l">
+                                                    <rect key="frame" x="15" y="10.999999999999998" width="73" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="countryName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9t-QO-GGy">
+                                                    <rect key="frame" x="274" y="11" width="104" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Km3-CR-y4v">
+                                                    <rect key="frame" x="15" y="41.333333333333336" width="236" height="0.3333333333333357"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="i9t-QO-GGy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XTS-Wu-e1l" secondAttribute="trailing" constant="15" id="3TS-ML-gNw"/>
+                                                <constraint firstItem="XTS-Wu-e1l" firstAttribute="leading" secondItem="StW-jE-G0S" secondAttribute="leading" constant="15" id="8jw-jV-RmD"/>
+                                                <constraint firstAttribute="bottom" secondItem="Km3-CR-y4v" secondAttribute="bottom" constant="15" id="9jV-jd-qaI"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Km3-CR-y4v" secondAttribute="trailing" constant="15" id="D2m-Qp-7vv"/>
+                                                <constraint firstItem="Km3-CR-y4v" firstAttribute="leading" secondItem="XTS-Wu-e1l" secondAttribute="leading" id="Dud-iT-u0U"/>
+                                                <constraint firstItem="i9t-QO-GGy" firstAttribute="top" secondItem="StW-jE-G0S" secondAttribute="top" constant="11" id="MSu-SM-7AL"/>
+                                                <constraint firstItem="XTS-Wu-e1l" firstAttribute="top" secondItem="StW-jE-G0S" secondAttribute="top" constant="11" id="R6c-6F-rg1"/>
+                                                <constraint firstItem="Km3-CR-y4v" firstAttribute="top" secondItem="XTS-Wu-e1l" secondAttribute="bottom" constant="10" id="o9e-tq-Prn"/>
+                                                <constraint firstAttribute="trailing" secondItem="i9t-QO-GGy" secondAttribute="trailing" constant="15" id="tEQ-Dc-pSM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityNameLabel" destination="XTS-Wu-e1l" id="7m0-Fg-rHs"/>
+                                            <outlet property="countryNameLabel" destination="i9t-QO-GGy" id="KnX-PS-2gJ"/>
+                                            <outlet property="industriesListStackView" destination="Km3-CR-y4v" id="2iM-rL-wOP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FTr-eI-NX3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Gh-V5-qzv"/>
+                            <constraint firstItem="FTr-eI-NX3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Cjc-Ln-yZC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FTr-eI-NX3" secondAttribute="trailing" id="bsU-7N-n2V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="FTr-eI-NX3" secondAttribute="top" id="unl-47-q0S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dOr-vB-kqd"/>
+                    <connections>
+                        <outlet property="cityListTableView" destination="FTr-eI-NX3" id="buL-Rk-IeS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689.3129770992366" y="38.732394366197184"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EUd-ys-Edz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W6g-hC-gh1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E8P-44-7N4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ft9-2O-zx8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDj-UY-3Nu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762.59541984732823" y="38.732394366197184"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
